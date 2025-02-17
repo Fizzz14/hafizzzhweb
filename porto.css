@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --primary-font: 'Inter', sans-serif;
+  --second-font: 'Alegreya', serif;
+}
+h1 {
+  color: brown;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+  color: #ffffff;
+  font-family: var(--primary-font);
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.button {
+  background-color: #00c99b;
+  border: none;
+  border-radius: 5px;
+  color: rgb(246, 244, 244);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #00b289;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+}
+
+.navigasi {
+  text-align: center;
+  display: flex;
+  padding: 0;
+  justify-content: start;
+  gap: 0;
+}
+
+.navigasi ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0rem;
+}
+
+.navigasi li {
+  margin: 15px 0;
+  display: inline;
+  float: left;
+}
+
+.navigasi a {
+  color: brown;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+  display: block;
+  padding: 14px 16px;
+  text-decoration: solid;
+}
+
+.navigasi a:hover {
+  color: rgb(238, 197, 146);
+}
+
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.board {
+  width: 100%;
+  height: 100%;
+  padding: 5rem 10%;
+  display: flex;
+}
+
+.board .student {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+
+.board .student h1 {
+  width: 100%;
+  text-align: left;
+  font-size: 2.5em;
+}
+
+.board .student p {
+  width: 100%;
+  text-align: left;
+  line-height: 1.75em;
+  font-size: 18px;
+  color: gray;
+}
+
+.board .pict {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board .pict .rounded {
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+  border-radius: 100%;
+  border: none;
+}
+
+.board .pict .rounded img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery {
+  width: 100%;
+  height: auto;
+}
+
+.gallery .select {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+.gallery .select .select__item {
+  color: #3f3f3f;
+  transition: color 0.3s ease-in-out;
+}
+
+.gallery .select .select__item:hover {
+  color: brown;
+  cursor: pointer;
+}
+
+.gallery .gallery__items {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gallery .gallery__items .item-section {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.gallery .gallery__items .item-section .image {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.gallery .gallery__items .item-section .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery .gallery__items .item-section figcaption {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gallery .gallery__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.gallery .gallery__items .item-section {
+  position: relative;
+}
+
+.gallery .gallery__items .item-section:hover figcaption {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgba(50, 50, 50, 0.65);
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+}
+
+.gallery .gallery__items .item-section figcaption h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section {
+  height: auto;
+  display: contents;
+  gap: 0;
+  justify-content: center;
+}
+
+.section .work,
+.section .portfolio,
+.section .contact {
+  width: 100%;
+  height: 100vh;
+  padding: 0 10%;
+}
+
+.footer {
+  background-color: rgb(238, 197, 146);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-contact h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.footer-link {
+  color: #6e6e6e;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-form {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-input,
+.form-textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.form-button {
+  background-color: #646363;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #4b4b4b;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.section .work {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+
+.section .work h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section .work .skill {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;  
+}
+
+.section .work .skill img {
+  width: 10%;
+  height: auto;
+  object-fit: cover;
+  display: flex;
+  justify-content: center; 
+}
+
+.portfolio .sertifikat_ {
+  display: flex;
+  width: auto;
+  height: 45.6%;
+  gap: 0.5rem;
+  text-align: center;
+  justify-content: center;
+}
